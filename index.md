@@ -4,7 +4,7 @@ title: "Import PST to Microsoft 365: Methods, Limits & Real Costs (2026)"
 description: "How to import PST files to Microsoft 365 in 2026: Purview network upload, AzCopy, PowerShell, throttling (24 GB/day per mailbox), failures, and plan upgrade costs."
 keywords: "import PST to Microsoft 365, PST import Office 365, Purview network upload, AzCopy PST import, New-MailboxImportRequest Exchange Online, PST import slow, Exchange Online archive limits"
 author: "Bharat Bhushan, Product Manager"
-reviewer: "[TECHNICAL REVIEWER NAME, ROLE]"
+reviewer: "Shelly Bhardwaj, Exchange Online Migration Expert"
 date: 2026-10-23
 last_modified_at: 2026-10-23
 canonical_url: "https://[YOUR-DOMAIN]/import-pst-to-microsoft-365/"
@@ -16,7 +16,7 @@ canonical_url: "https://[YOUR-DOMAIN]/import-pst-to-microsoft-365/"
 
 Need the product-led walkthrough instead? See Stellar's guide to [import PST to Office 365](https://www.stellarinfo.com/import-pst-to-office-365.php).
 
-**By** Bharat Bhushan, Product Manager · **Technically reviewed by** [REVIEWER NAME, ROLE] · **Published:** 23 October 2026 · **Last reviewed:** 23 October 2026
+**By** Bharat Bhushan, Product Manager · **Technically reviewed by** Shelly Bhardwaj, Exchange Online Migration Expert · **Published:** 23 October 2026 · **Last reviewed:** 23 October 2026
 
 > **Disclosure:** This guide is published by Stellar Information Technology, the maker of Stellar Migrator for Outlook. Microsoft figures come from Microsoft documentation and are linked. Product claims about Stellar are marked **[VERIFY]** and will be replaced with measured test results before publication. See [How we researched this](#how-we-researched-this).
 
@@ -378,7 +378,7 @@ Per Microsoft, imports place the mailbox on retention hold indefinitely. Release
 
 **About the author:** Bharat Bhushan is a Product Manager at Stellar Information Technology. [Add: years of Exchange / Microsoft 365 migration experience and LinkedIn URL]
 
-**About the reviewer:** [REVIEWER NAME] is [ROLE, credentials such as Microsoft certifications]. [LinkedIn URL]
+**About the reviewer:** Shelly Bhardwaj is an Exchange Online Migration Expert at Stellar Information Technology. [Add: credentials such as Microsoft certifications, and LinkedIn URL]
 
 ---
 
