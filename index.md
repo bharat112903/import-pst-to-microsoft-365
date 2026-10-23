@@ -14,6 +14,8 @@ canonical_url: "https://[YOUR-DOMAIN]/import-pst-to-microsoft-365/"
 
 > **Short answer:** In Exchange Online, the supported admin method for importing PST files is **Microsoft Purview network upload** (AzCopy + a mapping CSV + the Import page). `New-MailboxImportRequest` works only for **on-premises Exchange**. Microsoft cites roughly **24 GB per day per mailbox** for import speed (not guaranteed), and we found **no documented paid add-on** that raises it.
 
+Need the product-led walkthrough instead? See Stellar's guide to [import PST to Office 365](https://www.stellarinfo.com/import-pst-to-office-365.php).
+
 **By** Bharat Bhushan, Product Manager · **Technically reviewed by** [REVIEWER NAME, ROLE] · **Published:** 23 October 2026 · **Last reviewed:** 23 October 2026
 
 > **Disclosure:** This guide is published by Stellar Information Technology, the maker of Stellar Migrator for Outlook. Microsoft figures come from Microsoft documentation and are linked. Product claims about Stellar are marked **[VERIFY]** and will be replaced with measured test results before publication. See [How we researched this](#how-we-researched-this).
@@ -271,6 +273,8 @@ These figures buy **capacity**. They are a recurring cost and, per Microsoft's d
 ## Where a dedicated migration tool fits
 
 > **Status: unverified.** Nothing in this section is a published claim until it is backed by our own measured results and the current product spec. Any tool that writes into Exchange Online remains subject to the service limits of the connection method it uses; we will test and state this plainly.
+
+For a step-by-step guide to the Stellar approach, see how to [Import PST to Office 365 with Stellar Migrator for Outlook](https://www.stellarinfo.com/import-pst-to-office-365.php) **[VERIFY page matches the claims tested below]**.
 
 ### Claims we are testing, one per gap
 
