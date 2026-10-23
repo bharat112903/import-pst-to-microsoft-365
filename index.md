@@ -3,7 +3,7 @@ layout: default
 title: "Import PST to Microsoft 365: Methods, Limits & Real Costs (2026)"
 description: "How to import PST files to Microsoft 365 in 2026: Purview network upload, AzCopy, PowerShell, throttling (24 GB/day per mailbox), failures, and plan upgrade costs."
 keywords: "import PST to Microsoft 365, PST import Office 365, Purview network upload, AzCopy PST import, New-MailboxImportRequest Exchange Online, PST import slow, Exchange Online archive limits"
-author: "[AUTHOR NAME, ROLE]"
+author: "Bharat Bhushan, Product Manager"
 reviewer: "[TECHNICAL REVIEWER NAME, ROLE]"
 date: 2026-10-23
 last_modified_at: 2026-10-23
@@ -14,7 +14,7 @@ canonical_url: "https://[YOUR-DOMAIN]/import-pst-to-microsoft-365/"
 
 > **Short answer:** In Exchange Online, the supported admin method for importing PST files is **Microsoft Purview network upload** (AzCopy + a mapping CSV + the Import page). `New-MailboxImportRequest` works only for **on-premises Exchange**. Microsoft cites roughly **24 GB per day per mailbox** for import speed (not guaranteed), and we found **no documented paid add-on** that raises it.
 
-**By** [AUTHOR NAME, ROLE] · **Technically reviewed by** [REVIEWER NAME, ROLE] · **Published:** 23 October 2026 · **Last reviewed:** 23 October 2026
+**By** Bharat Bhushan, Product Manager · **Technically reviewed by** [REVIEWER NAME, ROLE] · **Published:** 23 October 2026 · **Last reviewed:** 23 October 2026
 
 > **Disclosure:** This guide is published by Stellar Information Technology, the maker of Stellar Migrator for Outlook. Microsoft figures come from Microsoft documentation and are linked. Product claims about Stellar are marked **[VERIFY]** and will be replaced with measured test results before publication. See [How we researched this](#how-we-researched-this).
 
@@ -370,7 +370,7 @@ Per Microsoft, imports place the mailbox on retention hold indefinitely. Release
 - **Limits:** Microsoft limits, prices and behavior change. The 24 GB per day figure is not a guarantee. Administrator reports are anecdotal and may reflect tenant-specific conditions.
 - **Corrections:** Found an error or an outdated figure? [Open an issue](../../issues) and we will review it, correct the page, and update the "Last reviewed" date.
 
-**About the author:** [AUTHOR NAME] is [ROLE] at Stellar Information Technology with [X years, specific Exchange / Microsoft 365 migration experience]. [LinkedIn URL]
+**About the author:** Bharat Bhushan is a Product Manager at Stellar Information Technology. [Add: years of Exchange / Microsoft 365 migration experience and LinkedIn URL]
 
 **About the reviewer:** [REVIEWER NAME] is [ROLE, credentials such as Microsoft certifications]. [LinkedIn URL]
 
