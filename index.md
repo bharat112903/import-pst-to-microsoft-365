@@ -303,18 +303,20 @@ For a step-by-step guide to the Stellar approach, see how to [Import PST to Offi
 
 Rules: isolated test tenant, copies only, same network and client for both approaches, fresh PST for every run, tenant and plan type recorded, reviewer sign-off. Raw data will be published in this repository under `/results`.
 
-### Results (to be filled from real data only)
+### Results
+
+**How to read this table.** Network upload times are **calculated from Microsoft's documented rate of about 24 GB per day per mailbox** (not guaranteed), not measured by us. Stellar Migrator for Outlook rows will be filled only from our own measured runs, with logs and screenshots, using the test plan above. Until then they are marked "Test in progress".
 
 | Scenario | Approach | Time | Items migrated | Skipped / failed | Notes |
 |---|---|---|---|---|---|
-| 20 GB, 1 mailbox | Network upload | | | | |
-| 20 GB, 1 mailbox | Stellar Migrator | | | | |
-| 100 GB, 1 mailbox | Network upload | | | | |
-| 100 GB, 1 mailbox | Stellar Migrator | | | | |
-| 5 PSTs, 1 mailbox | Network upload | | | | |
-| 5 PSTs, 1 mailbox | Stellar Migrator | | | | |
-| 50 mailboxes | Network upload | | | | |
-| 50 mailboxes | Stellar Migrator | | | | |
+| 20 GB, 1 mailbox | Network upload | About 1 day (20 / 24 GB per day, calculated) | Not measured | Items over 150 MB skipped; PSTs at the 20 GB recommended maximum | Analysis time before import is not documented by Microsoft |
+| 20 GB, 1 mailbox | Stellar Migrator | Test in progress | Test in progress | Test in progress | Run 3 times, average and range published |
+| 100 GB, 1 mailbox | Network upload | About 4 days (100 / 24 GB per day, calculated) | Not measured | PSTs over 20 GB can slow the import and Microsoft recommends splitting | Archive imports are capped at 100 GB per import |
+| 100 GB, 1 mailbox | Stellar Migrator | Test in progress | Test in progress | Test in progress | Includes large-PST handling without manual splitting to be confirmed |
+| 5 PSTs, 1 mailbox | Network upload | Sequential: total GB / 24 GB per day (for example 5 x 20 GB = 100 GB, about 4 days, calculated) | Not measured | Strict, case-sensitive CSV rows can fail validation | PSTs for the same mailbox import one after another |
+| 5 PSTs, 1 mailbox | Stellar Migrator | Test in progress | Test in progress | Test in progress | Behavior with several PSTs per mailbox to be confirmed |
+| 50 mailboxes | Network upload | Parallel across mailboxes: the largest mailbox sets the finish date (for example 100 GB, about 4 days, calculated) | Not measured | 500 rows per CSV; jobs stuck at Analysis in progress reported by administrators | Needs one CSV row per PST and retention hold cleanup afterward |
+| 50 mailboxes | Stellar Migrator | Test in progress | Test in progress | Test in progress | Parallel migration of many mailboxes to be confirmed |
 
 ---
 
