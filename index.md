@@ -20,7 +20,7 @@ Need the product-led walkthrough instead? See Stellar's guide to [import PST to 
 
 **By** [Bharat Bhushan](https://www.linkedin.com/in/bharat24/), Product Manager · **Technically reviewed by** [Shelly Bhardwaj](https://www.linkedin.com/in/shelly-bhardwaj/), Exchange Online Migration Expert · **Published:** 23 October 2026 · **Last reviewed:** 23 October 2026
 
-> **Disclosure:** This guide is published by Stellar Information Technology, the maker of Stellar Migrator for Outlook. Microsoft figures come from Microsoft documentation and are linked. Product claims about Stellar are marked **[VERIFY]** and will be replaced with measured test results before publication. See [How we researched this](#how-we-researched-this).
+> **Disclosure:** This guide is published by Stellar Information Technology, the maker of Stellar Migrator for Outlook. Microsoft figures come from Microsoft documentation and are linked. Where this guide discusses Stellar, it lists the questions we are testing rather than claims, and we will add measured results as they are completed. See [How we researched this](#how-we-researched-this).
 
 ---
 
@@ -234,7 +234,7 @@ If anyone tells you a license removes the throttle, ask for the exact SKU and wr
 | Exchange Online Plan 2 | 100 GB | 1.5 TB (auto-expanding) |
 | Exchange Online Kiosk / F3 | 2 GB | None |
 
-Source: [Microsoft Exchange Online limits](https://learn.microsoft.com/ro-ro/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits). Older third-party articles list different defaults, so **re-check Microsoft's page before acting**; plan limits change. Auto-expanding archives start at 100 GB and grow in increments up to 1.5 TB. One third-party source reports growth is capped at about 1 GB per day **[VERIFY against Microsoft documentation]**.
+Source: [Microsoft Exchange Online limits](https://learn.microsoft.com/ro-ro/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits). Older third-party articles list different defaults, so **re-check Microsoft's page before acting**; plan limits change. Auto-expanding archives start at 100 GB and grow in increments up to 1.5 TB.
 
 ### List prices found (USD per user per month, annual term)
 
@@ -279,23 +279,23 @@ Swap in your own mailbox count, sizes, hourly rate and delay impact to get a num
 
 ## Where a dedicated migration tool fits
 
-> **Status: unverified.** Nothing in this section is a published claim until it is backed by our own measured results and the current product spec. Any tool that writes into Exchange Online remains subject to the service limits of the connection method it uses; we will test and state this plainly.
+> **Status: testing in progress.** The rows below are questions we are testing, not claims, and results will be published only once measured. Any tool that writes into Exchange Online remains subject to the service limits of the connection method it uses; we will test and state this plainly.
 
-For a step-by-step guide to the Stellar approach, see how to [Import PST to Office 365 with Stellar Migrator for Outlook](https://www.stellarinfo.com/import-pst-to-office-365.php) **[VERIFY page matches the claims tested below]**.
+For a step-by-step guide to the Stellar approach, see how to [Import PST to Office 365 with Stellar Migrator for Outlook](https://www.stellarinfo.com/import-pst-to-office-365.php).
 
-### Claims we are testing, one per gap
+### Questions we are testing, one per gap
 
-| Gap in the manual route | What Stellar Migrator for Outlook should show | Evidence needed |
+| Gap in the manual route | Question we are testing with Stellar Migrator for Outlook | Evidence needed |
 |---|---|---|
-| No PST health check | Detects or handles corrupt PSTs before migration **[VERIFY]** | Test with deliberately damaged PSTs |
-| PSTs over 20 GB slow the import | Handles large PSTs without manual splitting **[VERIFY]** | Time and result at 20, 50, 100 GB |
-| Opaque failures | Clear progress, logs and error reasons **[VERIFY]** | Logs from failed and successful runs |
-| Strict CSV and AzCopy workflow | Simpler setup **[VERIFY]** | Step count and time to start |
-| Same-mailbox queue | Behavior with multiple PSTs per mailbox **[VERIFY]** | Time for 1, 3, 5 PSTs per user |
-| Scaling to many users | Parallel migration of many mailboxes **[VERIFY]** | Time for 10 and 50 mailboxes |
-| Retention hold side effect | Whether the tool sets or avoids it **[VERIFY]** | Mailbox properties after migration |
-| Re-runs after failure | Resume or retry without starting over **[VERIFY]** | Interrupt a run and resume |
-| Skipped items | Handling of items over 150 MB and deep folder trees **[VERIFY]** | Item counts before and after |
+| No PST health check | Does it detect or handle corrupt PSTs before migration? | Test with deliberately damaged PSTs |
+| PSTs over 20 GB slow the import | Does it handle large PSTs without manual splitting? | Time and result at 20, 50, 100 GB |
+| Opaque failures | Does it give clear progress, logs and error reasons? | Logs from failed and successful runs |
+| Strict CSV and AzCopy workflow | Is the setup simpler than CSV plus AzCopy? | Step count and time to start |
+| Same-mailbox queue | How does it behave with multiple PSTs per mailbox? | Time for 1, 3, 5 PSTs per user |
+| Scaling to many users | Can it migrate many mailboxes in parallel? | Time for 10 and 50 mailboxes |
+| Retention hold side effect | Does the tool set or avoid the hold? | Mailbox properties after migration |
+| Re-runs after failure | Can it resume or retry without starting over? | Interrupt a run and resume |
+| Skipped items | How does it handle items over 150 MB and deep folder trees? | Item counts before and after |
 
 ### Test plan (same method for both approaches)
 
