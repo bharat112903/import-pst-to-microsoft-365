@@ -260,15 +260,20 @@ These are third-party summaries of list prices as of October 2026. Prices vary b
 
 These figures buy **capacity**. They are a recurring cost and, per Microsoft's documentation, they do not raise the per-mailbox import rate.
 
-### Total cost of the manual route (template)
+### Total cost of the manual route (worked example)
 
-| Cost item | How to estimate | Your number |
+Example scenario: **100 mailboxes of 50 GB each**, moved by network upload, with admins who need the larger archive. Time comes from Microsoft's 24 GB per day figure; hours and delay cost are **planning assumptions** you should replace with your own numbers.
+
+| Cost item | How to estimate | Worked example (100 mailboxes, 50 GB each) |
 |---|---|---|
-| Import time | Data per mailbox / 24 GB per day; the longest mailbox sets the finish date | |
-| Admin hours | Upload, CSV prep, job monitoring, failed-job reruns | |
-| Failure allowance | Reruns x hours per rerun | |
-| License upgrade (if needed) | Worked example above | |
-| Delay cost | Days of delay x business impact | |
+| Import time | Data per mailbox / 24 GB per day; the longest mailbox sets the finish date | 50 / 24 = about 2 days per mailbox; different mailboxes import in parallel, so about 2 days overall (calculated) |
+| Admin hours | Upload, CSV prep, job monitoring, failed-job reruns | 40 hours (assumption): upload, 100-row CSV prep, validation, monitoring |
+| Failure allowance | Reruns x hours per rerun | 10 reruns x 2 hours = 20 hours (assumption: about 1 in 10 jobs rerun) |
+| License upgrade (if needed) | Section above: capacity cost per year | $4,800 a year for Exchange Online Plan 1 to Plan 2 at list prices found (100 users); $0 if mailboxes already fit your plan |
+| Delay cost | Days of delay x business impact | 3 days of stall x $500 a day = $1,500 (illustrative assumption; use your own daily impact) |
+| **Total** | Sum of the rows above | **60 admin hours + $4,800 a year in licenses + about $1,500 delay risk, about 2 days import time** |
+
+Swap in your own mailbox count, sizes, hourly rate and delay impact to get a number you can take to a budget meeting. These figures are an illustration, not a measured result.
 
 ---
 
